@@ -1,0 +1,24 @@
+// capacitor.build.gradle
+def CAPACITOR_VERSION = System.getenv("CAPACITOR_ANDROID_VERSION") ?: "5.7.0"
+
+buildscript {
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:8.1.1"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+dependencies {
+    implementation "com.getcapacitor:capacitor-android:$CAPACITOR_VERSION"
+}
+
